@@ -1,0 +1,41 @@
+.square {
+    background: white;
+    border: 5px ridge #656e21;
+    /*<!--float: left;-->*/
+    font-size: 24px; 
+    font-weight: bold;
+    height: 40px;
+    text-align: center;
+    width: 40px;
+    /*
+    фон
+    границы
+    размер шрифта
+    жирность шрифта
+    высота блока
+    расстояние от внешних границ блока
+    расстояние от внутренних границ блока
+    выравнивание
+    ширина блока
+    */
+}
+
+/*Служебный блок для вертикального выравнивания*/ 
+.main_container {
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.board {
+    background: rgb(129, 235, 217);
+    border: 4px solid #e48f7a;
+    display: table;
+    margin: auto;
+    /*для вертикального выравнивания*/
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}

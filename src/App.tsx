@@ -1,12 +1,28 @@
+import React from "react";
+import './css/App.css'
 
 function App() {
   return (
     <>
-    <h1>Hello world</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, dolor 
-      nulla, totam sunt maxime molestias necessitatibus error fugit dolorem sed, 
-      voluptatibus aperiam. Officia eligendi at harum consectetur aliquid earum dolore!
-    </p>
+    <div className="main_container">
+      <div className="board">
+        <div>
+          <button className="square">X</button>
+          <button className="square">X</button>
+          <button className="square">X</button>
+        </div>
+        <div>
+          <button className="square">X</button>
+          <button className="square">X</button>
+          <button className="square">X</button>
+        </div>
+        <div>
+          <button className="square">X</button>
+          <button className="square">X</button>
+          <button className="square">X</button>
+        </div>
+      </div>
+    </div>
     </>
   );
 }
