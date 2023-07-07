@@ -1,5 +1,6 @@
 import React from "react";
 import './css/Styles.css'
+import { useState } from "react";
 
 export default function Board() {
   return (
@@ -23,6 +24,17 @@ export default function Board() {
   );
 }
 
-function Button() {
-    return <button className="square">X</button>
+function Button( {value}: {value?: string}) {
+    return <button
+    className="square" 
+    onClick={handleClick}
+    >
+        {value}
+    </button>
+}
+
+const [state, setState] = useState(null)
+
+function handleClick(event: React.MouseEvent<HTMLButtonElement>) {
+    console.log("Clicked")
 }
