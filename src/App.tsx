@@ -1,30 +1,13 @@
 import React from "react";
-import './css/App.css'
+import './css/Styles.css'
+import Board from './Board'
 
-function App() {
+export default function App() {
   return (
     <>
     <div className="main_container">
-      <div className="board">
-        <div>
-          <button className="square">X</button>
-          <button className="square">X</button>
-          <button className="square">X</button>
-        </div>
-        <div>
-          <button className="square">X</button>
-          <button className="square">X</button>
-          <button className="square">X</button>
-        </div>
-        <div>
-          <button className="square">X</button>
-          <button className="square">X</button>
-          <button className="square">X</button>
-        </div>
-      </div>
+      <Board />
     </div>
     </>
   );
 }
-
-export default App;
