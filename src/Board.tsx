@@ -3,6 +3,22 @@ import './css/Styles.css'
 import { useState } from "react";
 
 export default function Board() {
+
+    function Button( {value}: {value?: string}) {
+        return <button
+        className="square" 
+        onClick={handleClick}
+        >
+            {value}
+        </button>
+    }
+    
+    const [state, setState] = useState(null)
+    
+    function handleClick(event: React.MouseEvent<HTMLButtonElement>) {
+        console.log("Clicked")
+    }
+
   return (
     <div className="board">
         <div>
@@ -22,19 +38,4 @@ export default function Board() {
         </div>
     </div>
   );
-}
-
-function Button( {value}: {value?: string}) {
-    return <button
-    className="square" 
-    onClick={handleClick}
-    >
-        {value}
-    </button>
-}
-
-const [state, setState] = useState(null)
-
-function handleClick(event: React.MouseEvent<HTMLButtonElement>) {
-    console.log("Clicked")
 }
