@@ -2,7 +2,7 @@
     background: rgb(161, 198, 233);
     border: 1px solid #add896;
     /*<!--float: left;-->*/
-    font-size: 24px; 
+    font-size: 24px;
     font-weight: bold;
     height: 40px;
     text-align: center;
@@ -18,6 +18,11 @@
     выравнивание
     ширина блока
     */
+}
+
+/*Чтобы не было псевдо отступов м\д строками кнопок*/
+.square::after {
+    content: '';
 }
 
 /*Служебный блок для вертикального выравнивания*/ 
