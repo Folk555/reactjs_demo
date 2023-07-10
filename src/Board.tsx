@@ -7,7 +7,7 @@ export default function Board() {
     const [xIsNext, setXIsNext] = useState(true);
     const [squares, setSquare] = useState(Array<string|null>(9).fill(null))
     function handleClick(i: number) {
-        if (squares[i]) return
+        if (squares[i] || calculateWinner(squares)) return
         const nextSquares = squares.slice()
         nextSquares[i] = xIsNext ? "X" : "O"
         setSquare(nextSquares)
@@ -49,4 +49,27 @@ function Button(input: IButtonValue) {
         {input.value}
     </button>
 }
+
+function calculateWinner(squares: (string | null)[]) : string | null {
+
+    const lines: number[][] = [
+        [0,1,2],
+        [3,4,5],
+        [6,7,8],
+        [0,3,6],
+        [1,4,7],
+        [2,5,8],
+        [0,4,8],
+        [2,4,6]
+    ]
+
+    for (let i = 0; i < lines.length; ++i){
+        const [a, b, c]: [number, number, number] = lines[i] as [number, number, number]
+        if ((squares[a] === squares[b]) && (squares[b] === squares[c]) && (squares[a] !== null))
+            return squares[a]
+    }
+
+    return null
+}
+
 
