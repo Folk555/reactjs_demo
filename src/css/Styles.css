@@ -44,19 +44,19 @@
     box-shadow: 0px 0px 10px 10px #9903f0f5;
     /*для вертикального выравнивания*/
     position: relative;
-    top: 50%;
+    top: 37%;
     transform: translateY(-50%);
 }
 
 .status {
-    background: rgba(129, 235, 217, 0);
-    font-size: 16px;
+    color: #ffffffcb;
+    font-size: 18px;
     font-weight: bold;
-    margin: 6;
+    font-family: 'Kalam', cursive;
     display: table;
     margin: auto;
     /*для вертикального выравнивания*/
     position: relative;
-    top: 44%;
+    top: 35%;
     transform: translateY(-50%);
 }
