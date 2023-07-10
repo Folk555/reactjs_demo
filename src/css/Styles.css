@@ -60,3 +60,10 @@
     top: 35%;
     transform: translateY(-50%);
 }
+
+.history {
+    color: #ffffffcb;
+    background: rgba(19, 101, 224, 0);
+    font-size: 9px;
+    font-family: 'Kalam', cursive;
+}
