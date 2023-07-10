@@ -47,3 +47,16 @@
     top: 50%;
     transform: translateY(-50%);
 }
+
+.status {
+    background: rgba(129, 235, 217, 0);
+    font-size: 16px;
+    font-weight: bold;
+    margin: 6;
+    display: table;
+    margin: auto;
+    /*для вертикального выравнивания*/
+    position: relative;
+    top: 44%;
+    transform: translateY(-50%);
+}
