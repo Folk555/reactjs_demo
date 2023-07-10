@@ -2,17 +2,20 @@ import React from "react";
 import './css/Styles.css'
 import { useState } from "react";
 
-export default function Board() {
+interface IBoardValues {
+    xIsNext: boolean,
+    squares: (string|null)[],
+    onPlay: Function
+}
 
-    const [xIsNext, setXIsNext] = useState(true);
-    const [squares, setSquare] = useState(Array<string|null>(9).fill(null))
+export default function Board(values: IBoardValues) {
+    const squares: (null|string)[] = values.squares
 
     function handleClick(i: number) {
-        if (squares[i] || calculateWinner(squares)) return
-        const nextSquares = squares.slice()
-        nextSquares[i] = xIsNext ? "X" : "O"
-        setSquare(nextSquares)
-        setXIsNext(!xIsNext)
+        if (values.squares[i] || calculateWinner(values.squares)) return
+        const nextSquares = values.squares.slice()
+        nextSquares[i] = values.xIsNext ? "X" : "O"
+        values.onPlay(nextSquares)
     }
 
     const winner: string | null = calculateWinner(squares)
@@ -20,7 +23,7 @@ export default function Board() {
     if (winner) 
         status = "Winner: " + winner +"-player"
     else 
-        status = (xIsNext ? "X" : "O") +"-player turn"
+        status = (values.xIsNext ? "X" : "O") +"-player turn"
 
   return (
     <>
